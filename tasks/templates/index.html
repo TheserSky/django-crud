@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="center">
+    <form class="form-lab-static" action="/signup/" method="post">
+        <h1>Signup  </h1>
+        
+            {% csrf_token %}
+            <div>
+                <p class="text-area-user">Username</p>
+                <input type="text" name="username" id="username" placeholder="Write you username">
+            </div>
+            <div>
+                <p class="text-area-user">Password</p>
+                <input type="password" name="password1" id="Password" placeholder="Write you password">
+            </div>
+            <div>
+                <p class="text-area-user">Username</p>
+                <input type="password" name="password2" id="password2" placeholder="Confirm you password">
+            </div>
+            <button>
+                Signup
+            </button>
+        </form>
+</div>
+<p> {{error}} </p>
+{% endblock %}

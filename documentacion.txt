@@ -1,0 +1,30 @@
+
+DOCUMENTACIOON DE DJANGO CON SQL3
+--------------------------------
+1.ENTORNO VIRTUAL
+    1.COMANT: "py -m venv venv"
+    2.INCORPORARLO: F1 > python select interpreter > venv
+        OTRO MODO: ".\venv\Scripts\activate"
+2.INSTALAR DJANGO
+    COMANT: "pip install django"
+3.CREAR NEW PROJECT
+    COMANT: "django-admin startproject djangoApp ."
+    EJECUTAR PROJECT: "python manage.py runserver "
+4.CREAR APP DENTRO DEL PROJECT
+    COMANT: "python manage.py startapp tasks"
+    CONECTARLA: project > settings > install app > agregamos app
+5.COMO CONETAR LA VISTA     
+    CONETAR: project > urls (importamos la c.views de la app y agragamos al string urls)
+
+IMPORTACIONES IMPORTANTES
+----------------------------------
+1."from django.contrib.auth.forms import UserCreationForm" / para crear un forms en views de app
+2.
+    EJEMPLO:
+        <form action="/signup/" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>
+                Signup
+            </button>
+        </form>

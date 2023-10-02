@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="contianer-general-orden">
+        <p class="text-tasks">View tasks completed</p>
+
+        {% for task in tasks %}
+            <div class="conainer-content-sup">
+                {% if task.important %}
+                <h1 class="red-important-color content-space-sup-task">
+                    {{task.title}}
+                </h1>
+                {% else %}
+                <h1 class="content-space-sup-task">
+                    {{task.title}}
+                </h1>
+                {% endif%}
+                <p>
+                    {{task.description}}
+                </p>
+                <p>
+                    {{task.user.username}}
+                </p>
+                <a href="{% url 'taskdetail' task.id %}">Expand</a>
+            </div> 
+        {% endfor %}
+    </div>
+{% endblock %}

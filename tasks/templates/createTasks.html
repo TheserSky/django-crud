@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block content%}
+    
+
+    <div class="center">
+        <form class="form-lab-static" action="/createTasks/" method="POST">
+            {% csrf_token %}
+            <div>
+                <h1>Create task</h1>
+            </div>
+            <div>
+                <p class="text-area-user">Title</p>
+                <input class="" type="text" name="title">
+            </div>
+            <div>
+                <p class="text-area-user">Description</p>
+                <textarea class="textarea-for" name="description" id="description" cols="30" rows="20"></textarea>
+            </div>
+            <div>
+                <p class="text-area-user">Important</p>
+                <input class="" type="checkbox" name="important">
+            </div>
+    
+            <button>
+                Create
+            </button>
+        </form>
+    </div>
+
+{% endblock %}

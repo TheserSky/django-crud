@@ -1,0 +1,125 @@
+* {
+  font-family: calibri;
+  margin: 0;
+  padding: 0;
+}
+.space-normal {
+  display: flex;
+  justify-items: normal;
+  align-items: center;
+}
+.space-expand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.style-a-a {
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+}
+.style-a-a:hover {
+  border-bottom: 0.1em solid rgb(0, 60, 255);
+  background-color: rgba(104, 157, 255, 0.224);
+  transition: 0.2s;
+}
+li {
+  list-style-type: none;
+}
+input {
+  padding: 0.5em;
+  background-color: transparent;
+  width: 28em;
+  outline: 0;
+  border: 0.1em solid rgb(119, 119, 119);
+  color: rgb(29, 29, 29);
+}
+.textarea-for {
+  padding: 0.5em;
+  background-color: transparent;
+  width: 28em;
+  outline: 0;
+  border: 0.1em solid rgb(136, 136, 136);
+  color: rgb(61, 61, 61);
+}
+
+button {
+  padding: 0.5em 2em;
+  background-color: rgb(0, 255, 174);
+  color: black;
+  border-radius: 1em;
+  border: 0em solid black;
+  margin-top: 1em;
+}
+.width-img-class {
+  width: 2.7em;
+}
+.header-spand-padd {
+  padding: 1em;
+  background-color: rgb(38, 38, 41);
+}
+.contianer-general-orden {
+  padding: 1em;
+  flex-wrap: wrap;
+  display: flex;
+}
+.conainer-content-sup {
+  padding: 1em;
+  border-radius: 1em;
+  background-color: rgb(247, 247, 247);
+  margin-bottom: 1em;
+  width: 20em;
+  margin: 1em;
+  position: relative;
+}
+.text-tasks {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+.red-important-color{
+    color: rgb(23, 148, 38);
+}
+.content-space-sup-task{
+    padding-bottom: 0.3em;
+    margin-bottom: 0.3em;
+    border-bottom: 0.1em solid rgb(99, 99, 99);
+}
+.form-lab-static{
+  padding: 1em;
+  border: 0.1em solid rgb(188, 188, 188);
+  border-radius: 1em;
+  margin-top: 5em;
+}
+.center{
+  display:flex;
+  justify-content: center;
+}
+.text-area-user{
+  font-size: 1.1em;
+  margin: 0.8em 0em;
+}
+.content-space-center-with{
+  width: 40em;
+}
+.text-font-important{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+.text-font-important-sup{
+  font-size: 1.2em;
+  line-height: 1.8em;
+  color: rgb(92, 92, 92);
+}
+.object-btn-btn{
+  padding: 0.3em 0.6em;
+  background-color: rgb(0, 85, 255);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.8em;
+}
+.object-space-position{
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}

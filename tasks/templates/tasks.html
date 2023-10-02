@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<p class="text-tasks">View tasks</p>
+
+    <div class="contianer-general-orden">
+
+        {% for task in tasks %}
+            <div class="conainer-content-sup">
+                {% if task.important %}
+                <h1 class="red-important-color content-space-sup-task">
+                    {{task.title}}
+                </h1>
+                {% else %}
+                <h1 class="content-space-sup-task">
+                    {{task.title}}
+                </h1>
+                {% endif%}
+                <p>
+                    {{task.description}}
+                </p>
+                <p>
+                    {{task.user.username}}
+                </p>
+                <div class="object-space-position">
+                    <a class="object-btn-btn" href="{% url 'taskdetail' task.id %}">Delails</a>
+                </div>
+            </div> 
+        {% endfor %}
+    </div>
+{% endblock %}

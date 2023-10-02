@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    <title>tasks</title>
+</head>
+<body>
+
+    <header class="header-spand-padd">
+        <nav class="space-expand" >
+            <div>
+                <img class="width-img-class" src="{% static 'imgs/cou.png' %}" alt="">
+            </div>
+            <div>
+                <ul class="space-normal">
+                    <li>
+                        <a class="style-a-a" href="/">Home</a>
+                    </li>
+                    
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a class="style-a-a" href="/tasks">Tasks</a>
+                    </li>
+                    <li>
+                        <a class="style-a-a" href="/task_completed">Tasks completed</a>
+                    </li>
+                    <li>
+                        <a class="style-a-a" href="/createTasks">Create tasks</a>
+                    </li>
+                    <li>
+                        <a class="style-a-a" href="/logout">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class="style-a-a" href="/signup">Signup</a>
+                    </li>
+                    <li>
+                        <a class="style-a-a" href="/signin">Signin</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
